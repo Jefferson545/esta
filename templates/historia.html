@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block contenido %}
+
+<div class="container-fluid">
+    <div class="row text-center">
+        <h3 class="pb-2 bg-white mb-4">Historial estadistico de Vehiculos</h3>
+        <div class="col">
+            <div class="container">
+                <div class="border p-3">
+                    
+                    <div class="form-group">
+                        <label for="combobox-anios">Selecciona un Año:</label>
+                        <select id="combobox-anios"></select>
+                    </div>
+                    <!-- Gráfica -->
+                    <div id="chart" class="chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Apache ECharts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.1/echarts.min.js"></script>
+<!-- Custom JS -->
+<script src="{% static 'js/main.js' %}"></script>
+
+{% endblock %}
